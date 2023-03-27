@@ -1,15 +1,15 @@
-const axios = require('axios');
-const FormData = require('form-data');
+import axios from 'axios';
+import FormData from 'form-data';
+import { api_key } from './secure_data.js';
+import { auth_token } from './secure_data.js';
 
-let api_key = "VbWk7s3L4KiK5fzlO7JD3Q5EYolJI7n5";
-let auth_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJleHAiOjE2ODM3NTA2NjEsInVpZCI6NDAzNTkyODQsImd0IjoiY29uc3VtZXIiLCJncyI6W10sImxhbmciOiJlbi11cyIsImV4dHJhIjp7Imd1ZXN0X2lkIjoxMzI5Mjc5NTh9fQ.ALoDgeVfZxiM1i80JUnSyITLgyAvLbfw3zc5Oat5vBYjQoc6yAA3d90dxmqsDcR-2CEXWOVmWyqh3kd7igOdiUTTAGFpt2pUosiR7g163pc0ALPMtO6BZWMwQ08K5RIVHZ-2RDzNxhMl3KMmiM_w7GU3k2e6rRjotyYKEaqlWnwkEcgl";
-let day = "2023-03-31";
-let timeHour = 20;
-let timeMinute = 0;
-let window = 60; //time to look before and after if reservation not available (in minutes)
+let day = "2023-04-08";
+let timeHour = 16;
+let timeMinute = 15;
+let window = 45; //time to look before and after if reservation not available (in minutes)
 let diningLoc = null; //set to null if doesn't matter
 let party_size = "2";
-let venue_id = "6194";
+let venue_id = "65622";
 let allowedIter = 100; //should be like 500 for midnights
 let currentIter = 0;
 
